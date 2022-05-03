@@ -35,7 +35,11 @@
   "prettier": "@brlt/prettier",
   "devDependencies": {
     "@brlt/prettier": "^1.6.4",
+    "astro": "^1.0.0-beta.20",
     "prettier": "latest",
+    "prettier-plugin-astro": "^0.0.12",
+    "prettier-plugin-svelte": "^2.7.0",
+    "svelte": "^3.48.0",
     "turbo": "latest"
   }
 }

@@ -1,56 +1,71 @@
 ---
-  import "@fontsource/ibm-plex-mono";
-  import "@typehaus/metropolis";
-  import Footer from '../components/Footer.astro';
-  import Header from '../components/Header.astro';
-  import "../fonts/Gilroy.css";
+import '@fontsource/ibm-plex-mono';
+import '@typehaus/metropolis';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '../fonts/Gilroy.css';
 ---
+
 <html lang="en" class="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Supacolors</title>
-		<meta property="theme-color" name="theme-color" content="#40bf86" />
-		<meta property="background-color" name="background-color" content="#251e40" />
-		<meta name="twitter:title" content="Supacolors" />
-		<meta name="twitter:site" content="@nberlette" />
-		<meta name="twitter:creator" content="@nberlette" />
-		<meta name="twitter:description" content="Elegant color palette collection, built as framework-agnostic extensions of the Supabase UI package." />
-		<meta name="twitter:card" content="summary_image_large" />
-		<meta name="twitter:url" content="https://supacolors.ml" />
-		<meta name="twitter:image" content="" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://supacolors.ml" />
-		<meta property="og:title" content="Supacolors" />
-		<meta property="og:description" content="Elegant color palette collection, built as framework-agnostic extensions of the Supabase UI package." />
-		<meta property="og:author" content="Nicholas Berlette" />
-		<meta property="og:image" content="" />
-		<meta property="og:site_name" content="Supacolors" />
-		<meta name="title" content="Supacolors" />
-		<meta name="description" content="Elegant color palette collection, built as framework-agnostic extensions of the Supabase UI package." />
-		<meta name="keywords" content="supacolors,supabase,ui,tailwindcss,colors,windicss,css,colors,tokens,themes,color schemes,dark mode,web design,free,open source" />
-		<link rel="canonical" href="https://supacolors.ml" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html, body {
-				font-family: -system-ui, BlinkMacSystemFont, AppleColorEmoji, sans-serif;
-			}
-			:is(h1, h2, h3, h4, h5, h6) {
-				font-family: 'Gilroy', -system-ui, sans-serif;
-				letter-spacing: -0.05em !important;
-			}
-			:is(pre, code, .font-mono) {
-				font-family: 'IBM Plex Mono', 'Operator Mono SSm Lig', 'Operator Mono', 'Dank Mono', dm, 'MonoLisa', ml, 'Fira Code', 'Fira Mono', Source Code Pro, monospace !important;
-				font-variant-ligatures: common-ligatures, contextual, disc;
-			}
-		</style>
-	</head>
-	<body class="dark:bg-[#17151f] dark:text-[#f1eefe] bg-[#f7ecfc] text-[#112233] px-8 sm:px-16">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Supacolors</title>
+    <meta property="theme-color" name="theme-color" content="#40bf86" />
+    <meta property="background-color" name="background-color" content="#251e40" />
+    <meta name="twitter:title" content="Supacolors" />
+    <meta name="twitter:site" content="@nberlette" />
+    <meta name="twitter:creator" content="@nberlette" />
+    <meta
+      name="twitter:description"
+      content="Elegant color palette collection, built as framework-agnostic extensions of the Supabase UI package."
+    />
+    <meta name="twitter:card" content="summary_image_large" />
+    <meta name="twitter:url" content="https://supacolors.ml" />
+    <meta name="twitter:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://supacolors.ml" />
+    <meta property="og:title" content="Supacolors" />
+    <meta
+      property="og:description"
+      content="Elegant color palette collection, built as framework-agnostic extensions of the Supabase UI package."
+    />
+    <meta property="og:author" content="Nicholas Berlette" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="Supacolors" />
+    <meta name="title" content="Supacolors" />
+    <meta
+      name="description"
+      content="Elegant color palette collection, built as framework-agnostic extensions of the Supabase UI package."
+    />
+    <meta
+      name="keywords"
+      content="supacolors,supabase,ui,tailwindcss,colors,windicss,css,colors,tokens,themes,color schemes,dark mode,web design,free,open source"
+    />
+    <link rel="canonical" href="https://supacolors.ml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      html,
+      body {
+        font-family: -system-ui, BlinkMacSystemFont, AppleColorEmoji, sans-serif;
+      }
+      :is(h1, h2, h3, h4, h5, h6) {
+        font-family: 'Gilroy', -system-ui, sans-serif;
+        letter-spacing: -0.05em !important;
+      }
+      :is(pre, code, .font-mono) {
+        font-family: 'IBM Plex Mono', 'Operator Mono SSm Lig', 'Operator Mono', 'Dank Mono', dm,
+          'MonoLisa', ml, 'Fira Code', 'Fira Mono', Source Code Pro, monospace !important;
+        font-variant-ligatures: common-ligatures, contextual, disc;
+      }
+    </style>
+  </head>
+  <body class="dark:bg-[#17151f] dark:text-[#f1eefe] bg-[#f7ecfc] text-[#112233] px-8 sm:px-16">
     <div class="max-w-[1400px] mx-auto mt-10 mb-20">
-			<Header title="Supacolors" currentPage="/" />
+      <Header title="Supacolors" currentPage="/" />
       <div class="">
         <slot />
       </div>
-			<Footer />
+      <Footer />
     </div>
-	</body>
+  </body>
 </html>

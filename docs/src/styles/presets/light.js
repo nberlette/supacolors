@@ -426,4 +426,4 @@ module.exports = {
     },
     ...require('./lightAlpha').theme,
   },
-};
+}

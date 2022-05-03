@@ -424,4 +424,4 @@ module.exports = {
     },
     ...require('./darkAlpha').theme,
   },
-};
+}

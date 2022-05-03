@@ -1,8 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  content: [
-    './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       fontSize: {
@@ -13,4 +11,4 @@ module.exports = {
   },
   plugins: [],
   presets: [require('./src/styles/presets/dark')],
-};
+}

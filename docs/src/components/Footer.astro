@@ -2,24 +2,46 @@
 import SvgIcon from './SvgIcon.svelte';
 ---
 
-<div class="flex w-full h-3 mt-20 overflow-hidden grid grid-cols-12 rounded-full">
-  <div class="block col-span-3 bg-brand-1000"></div>
+<div class="w-full h-3 mt-20 overflow-hidden grid grid-cols-12 rounded-full">
   <div class="block col-span-1 bg-blue-A1100"></div>
+  <div class="block col-span-1 bg-orange-1200"></div>
+  <div class="block col-span-3 bg-violet-1000"></div>
+  <div class="block col-span-2 bg-teal-1100"></div>
   <div class="block col-span-2 bg-crimson-1100"></div>
-  <div class="block col-span-1 bg-yellow-1200"></div>
-  <div class="block col-span-2 bg-violet-1100"></div>
-  <div class="block col-span-1 bg-red-1100"></div>
-  <div class="block col-span-2 bg-teal-A1000"></div>
+  <div class="block col-span-1 bg-slate-1100"></div>
+  <div class="block col-span-2 bg-mint-A1000"></div>
 </div>
 
 <div class="mb-10 py-4 px-4">
-	<h3 class="text-3xl font-light lowercase tracking-tighter flex justify-between place-items-center content-center">
-    <a href="https://github.com/nberlette" class="flex lowercase" target="_blank" rel="external noopener noreferer">
-      <img src="https://cdn.berlette.com/brand/logo.svg" alt="" width="32" height="32" /> <span class="ml-2 underline hover:[text-decoration-color:#31d6ffec] transition-all duration-300 ease-in" style="text-decoration: 1.5px wavy underline #7650ff38;">Nicholas Berlette</span>
+  <h3
+    class="text-3xl font-light lowercase tracking-tighter flex justify-between place-items-center content-center"
+  >
+    <a
+      href="https://github.com/nberlette"
+      class="flex lowercase"
+      target="_blank"
+      rel="external noopener noreferer"
+    >
+      <img src="https://cdn.berlette.com/brand/logo.svg" alt="" width="32" height="32" />
+      <span
+        class="ml-2 underline hover:[text-decoration-color:#31d6ffec] transition-all duration-300 ease-in"
+        style="text-decoration: 1.5px wavy underline #7650ff38;">Nicholas Berlette</span
+      >
     </a>
 
-    <a href="https://github.com/nberlette/supacolors" target="_blank" rel="external noopener noreferer" title="Supacolors on GitHub" class=" mr-2">
-      <SvgIcon id="github" class="relative top-1 transition-all duration-300 ease-in hover:text-grass-A1000" />
+    <a
+      href="https://github.com/nberlette/supacolors"
+      target="_blank"
+      rel="external noopener noreferer"
+      title="Supacolors on GitHub"
+      class=" mr-2"
+    >
+      <SvgIcon
+        id="github"
+        width="24"
+        height="24"
+        class="relative top-1 transition-all duration-300 ease-in hover:text-grass-A1000"
+      />
     </a>
   </h3>
 </div>
