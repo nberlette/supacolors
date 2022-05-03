@@ -1,0 +1,45 @@
+{
+  "name": "@supacolors/docs",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Nicholas Berlette <nick@berlette.com>",
+  "private": true,
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "packageManager": "pnpm@7.0.0",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0",
+    "pnpm": ">=7.0.0"
+  },
+  "homepage": "https://supacolors.ml",
+  "readme": "https://github.com/nberlette/supacolors#readme",
+  "bugs": "https://github.com/nberlette/supacolors/issues/new",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nberlette/supacolors",
+    "directory": "docs/"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "prettier -c .",
+    "clean": "rm -rf node_modules .turbo build"
+  },
+  "devDependencies": {
+    "@astrojs/svelte": "^0.1.2",
+    "@astrojs/tailwind": "^0.2.1",
+    "@fontsource/ibm-plex-mono": "^4.5.9",
+    "@github/clipboard-copy-element": "^1.1.2",
+    "@svelterun/store": "^0.2.2",
+    "@typehaus/metropolis": "*",
+    "@types/tinycolor2": "^1.4.3",
+    "astro": "^1.0.0-beta.20",
+    "svelte": "^3.48.0",
+    "tinycolor2": "^1.4.2",
+    "vite": "^2.9.7"
+  }
+}

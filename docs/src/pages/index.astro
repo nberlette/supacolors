@@ -1,0 +1,65 @@
+---
+  import Swatches from '~/components/Swatches.svelte';
+  import Toggles from '~/components/Toggles.svelte';
+  import Layout from '~/layouts/default.astro';
+  import colors from '~/swatches.json';
+---
+<Layout>
+	<div class="max-w-[90vw] px-8 pb-8 mb-10">
+    <Toggles client:load></Toggles>
+  </div>
+  <div class="my-8 pb-20 border-b-4 grid grid-cols-12 gap-x-6 gap-y-8">
+    <div class="col-span-12 md:col-span-6">
+        <h2 class="text-6xl font-thin tracking-tight mb-2 pb-2 flex justify-between"><span>light · base</span></h2>
+        <div class="w-full h-3 mb-8 overflow-hidden grid grid-cols-12 rounded-full xl:hidden">
+          <div class="block col-span-1 bg-violet-A600"></div>
+          <div class="block col-span-2 bg-yellow-A500"></div>
+          <div class="block col-span-2 bg-cyan-A600"></div>
+          <div class="block col-span-2 bg-blue-A700"></div>
+          <div class="block col-span-2 bg-crimson-A600"></div>
+          <div class="block col-span-2 bg-grass-A900"></div>
+          <div class="block col-span-1 bg-amber-A400"></div>
+        </div>
+      <Swatches colors={colors.light} client:load></Swatches>
+    </div>
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-6xl font-thin tracking-tight mb-2 pb-2 flex justify-between"><span>light · alpha</span></h2>
+      <div class="w-full h-3 mb-8 overflow-hidden grid grid-cols-12 rounded-full xl:hidden">
+        <div class="block col-span-1 bg-violet-A600"></div>
+        <div class="block col-span-2 bg-yellow-A500"></div>
+        <div class="block col-span-2 bg-cyan-A600"></div>
+        <div class="block col-span-2 bg-blue-A700"></div>
+        <div class="block col-span-2 bg-crimson-A600"></div>
+        <div class="block col-span-2 bg-grass-A900"></div>
+        <div class="block col-span-1 bg-amber-A400"></div>
+      </div>
+      <Swatches colors={colors.lightAlpha} let:alpha={true} client:load></Swatches>
+    </div>
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-6xl font-thin tracking-tight mb-2 pb-2 flex justify-between"><span>dark · base</span></h2>
+      <div class="w-full h-3 mb-8 overflow-hidden grid grid-cols-12 rounded-full">
+        <div class="block col-span-1 bg-violet-A600"></div>
+        <div class="block col-span-2 bg-yellow-A500"></div>
+        <div class="block col-span-2 bg-cyan-A600"></div>
+        <div class="block col-span-2 bg-blue-A700"></div>
+        <div class="block col-span-2 bg-crimson-A600"></div>
+        <div class="block col-span-2 bg-grass-A900"></div>
+        <div class="block col-span-1 bg-amber-A400"></div>
+      </div>
+      <Swatches colors={colors.dark} client:visible></Swatches>
+    </div>
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-6xl font-thin tracking-tight mb-2 pb-2 flex justify-between"><span>dark · alpha</span></h2>
+      <div class="w-full h-3 mb-8 overflow-hidden grid grid-cols-12 rounded-full">
+        <div class="block col-span-1 bg-violet-A600"></div>
+        <div class="block col-span-2 bg-yellow-A500"></div>
+        <div class="block col-span-2 bg-cyan-A600"></div>
+        <div class="block col-span-2 bg-blue-A700"></div>
+        <div class="block col-span-2 bg-crimson-A600"></div>
+        <div class="block col-span-2 bg-grass-A900"></div>
+        <div class="block col-span-1 bg-amber-A400"></div>
+      </div>
+      <Swatches colors={colors.darkAlpha} let:alpha={true} client:visible></Swatches>
+    </div>
+  </div>
+</Layout>

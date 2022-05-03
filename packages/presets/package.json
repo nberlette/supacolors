@@ -1,0 +1,31 @@
+{
+  "name": "@supacolors/presets",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Nicholas Berlette <nick@berlette.com>",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@7.0.0",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0",
+    "pnpm": ">=7.0.0"
+  },
+  "homepage": "https://supacolors.ml",
+  "readme": "https://github.com/nberlette/supacolors#readme",
+  "bugs": "https://github.com/nberlette/supacolors/issues/new",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nberlette/supacolors",
+    "directory": "packages/presets"
+  },
+  "scripts": {
+    "test": "",
+    "build": "",
+    "lint": "",
+    "start": "",
+    "release": ""
+  }
+}

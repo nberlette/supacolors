@@ -1,0 +1,41 @@
+{
+  "name": "supacolors",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Nicholas Berlette <nick@berlette.com>",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "docs/",
+    "packages/*"
+  ],
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.0.0",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "homepage": "https://supacolors.ml",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nberlette/supacolors",
+    "directory": "./"
+  },
+  "readme": "https://github.com/nberlette/supacolors#readme",
+  "bugs": "https://github.com/nberlette/supacolors/issues",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean --no-cache && rm -rf node_modules",
+    "format": "prettier -w \"**/*.{js,jsx,ts,tsx,astro,svelte,vue,md,mdx}\""
+  },
+  "prettier": "@brlt/prettier",
+  "devDependencies": {
+    "@brlt/prettier": "^1.6.4",
+    "prettier": "latest",
+    "turbo": "latest"
+  }
+}

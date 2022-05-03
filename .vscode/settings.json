@@ -1,0 +1,15 @@
+{
+  "git.enableCommitSigning": true,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode",
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

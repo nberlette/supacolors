@@ -1,0 +1,27 @@
+---
+  import SvgIcon from './SvgIcon.svelte';
+  import ThemeToggle from './ThemeToggle.svelte';
+  const { title = 'supacolors', currentPage } = Astro.props;
+---
+
+	<h1 class="text-[2.5rem] leading-[1.33] font-bold font-[Gilroy] tracking-tighter place-items-center content-center self-center items-center align-center mb-2 pb-2 px-4 flex justify-between">
+    <a href="/" class="flex">
+      <SvgIcon id="supabase" class="relative top-1 mr-2 text-brand-900" width="48" height="48" /> <span>supacolors<span class="font-light">.css</span></span>
+    </a>
+    <div class="flex gap-x-4">
+      <a href="https://github.com/nberlette/supacolors" target="_blank" rel="external noopener noreferer" title="Supacolors on GitHub" class="mr-2">
+        <SvgIcon id="github" class="relative top-1 transition-all duration-300 ease-in hover:text-grass-A1000" />
+      </a>
+      <ThemeToggle />
+    </div>
+  </h1>
+
+  <div class="flex w-full h-3 mb-2 overflow-hidden grid grid-cols-12 rounded-full">
+    <div class="block col-span-3 bg-brand-1000"></div>
+    <div class="block col-span-1 bg-blue-A1100"></div>
+    <div class="block col-span-2 bg-crimson-1100"></div>
+    <div class="block col-span-1 bg-yellow-1200"></div>
+    <div class="block col-span-2 bg-violet-1100"></div>
+    <div class="block col-span-1 bg-red-1100"></div>
+    <div class="block col-span-2 bg-grass-1200"></div>
+  </div>

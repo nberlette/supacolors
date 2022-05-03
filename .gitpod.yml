@@ -1,0 +1,44 @@
+# to use an existing image already pubished to the registry:
+# image: nberlette/gitpod-enhanced
+
+# to use a local image:
+image:
+  file: .gitpod/Dockerfile
+
+tasks:
+  - init: |
+      pnpm install
+      pnpm dev
+# command: .gitpod/setup.sh
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+gitConfig:
+  tag.gpgsign: "true"
+  commit.gpgsign: "true"
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addBadge: true
+    addCheck: true
+    addLabel: gitpod
+
+vscode:
+  extensions:
+    - astro-build.astro-vscode
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
+    - svelte.svelte-vscode
+    - nickyhajal.vs-code-svelte-require
+    - editorconfig.editorconfig
+    - GraphQL.vscode-graphql
+    - christian-kohler.path-intellisense
+    - christian-kohler.npm-intellisense
+    - eg2.vscode-npm-script
+    - bradlc.vscode-tailwindcss
