@@ -1,15 +1,6 @@
-# to use an existing image already pubished to the registry:
-# image: nberlette/gitpod-enhanced
-
-# to use a local image:
-image:
-  file: .gitpod/Dockerfile
-
 tasks:
-  - init: |
-      pnpm install
-      pnpm dev
-# command: .gitpod/setup.sh
+  - init: pnpm install
+    command: pnpm dev
 
 ports:
   - port: 3000
