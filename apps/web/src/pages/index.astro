@@ -1,0 +1,45 @@
+---
+import RainbowDivider from '~/components/RainbowDivider.astro';
+import Swatches from '~/components/Swatches.svelte';
+import Toggles from '~/components/Toggles.svelte';
+import Layout from '~/layouts/default.astro';
+import colors from '~/swatches.json';
+---
+
+<Layout>
+  <div class="max-w-[90vw] px-8 pb-8 mb-10">
+    <Toggles client:load />
+  </div>
+  <div class="my-8 pb-20 border-b-4 grid grid-cols-12 gap-x-6 gap-y-8">
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-5xl font-thin tracking-tight mb-2 pb-2 flex justify-between">
+        <span>light</span>
+      </h2>
+      <RainbowDivider />
+      <Swatches colors={colors.light} client:load />
+    </div>
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-5xl font-thin tracking-tight mb-2 pb-2 flex justify-between">
+        <span>lightAlpha</span>
+      </h2>
+      <RainbowDivider />
+      {/* @ts-expect-error */}
+      <Swatches colors={colors.lightAlpha} let:alpha={true} client:load />
+    </div>
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-5xl font-thin tracking-tight mb-2 pb-2 flex justify-between">
+        <span>dark</span>
+      </h2>
+      <RainbowDivider />
+      <Swatches colors={colors.dark} client:visible />
+    </div>
+    <div class="col-span-12 md:col-span-6">
+      <h2 class="text-5xl font-thin tracking-tight mb-2 pb-2 flex justify-between">
+        <span>darkAlpha</span>
+      </h2>
+      <RainbowDivider />
+      {/* @ts-expect-error */}
+      <Swatches colors={colors.darkAlpha} let:alpha={true} client:visible />
+    </div>
+  </div>
+</Layout>

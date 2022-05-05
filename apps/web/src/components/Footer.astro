@@ -1,0 +1,40 @@
+---
+import RainbowDivider from './RainbowDivider.astro';
+import SvgIcon from './SvgIcon.svelte';
+---
+
+<RainbowDivider height={3} />
+
+<div class="mb-10 py-4 px-4">
+  <footer class="flex justify-between place-items-center content-center">
+    <h3 class="text-3xl font-light lowercase tracking-tighter leading-7">
+      <a
+        href="https://github.com/nberlette"
+        class="flex lowercase"
+        target="_blank"
+        rel="external noopener noreferer"
+      >
+        <img src="https://cdn.berlette.com/brand/logo.svg" alt="" width="32" height="32" />
+        <span
+          class="ml-2 text-opacity-75 hover:text-opacity-100 transition-all duration-300 ease-in"
+          >Nicholas Berlette</span
+        >
+      </a>
+    </h3>
+
+    <a
+      href="https://github.com/nberlette/supacolors"
+      target="_blank"
+      rel="external noopener noreferer"
+      title="Supacolors on GitHub"
+      class=" mr-2"
+    >
+      <SvgIcon
+        id="github"
+        width="24"
+        height="24"
+        class="relative transition-all duration-300 ease-in hover:text-grass-A1000"
+      />
+    </a>
+  </footer>
+</div>

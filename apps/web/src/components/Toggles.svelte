@@ -27,19 +27,25 @@
   }
 </script>
 
-<div transition:slide={{ duration: 500, delay: 100 }} class="px-4 py-2 grid grid-cols-12 gap-x-8">
-  <div class="col-span-9 w-full min-h-[10rem]">
+<div hidden class="hidden text-opacity-60 hover:text-opacity-80" />
+<div
+  transition:slide={{ duration: 500, delay: 100 }}
+  class="py-2 grid grid-cols-12 gap-x-8 max-w-[calc(100vw)-3rem]"
+>
+  <div class="col-span-10 w-full">
     {#if $panelOpen}
       <div
-        class="flex gap-x-6 gap-y-4 place-items-center content-center justify-evenly flex-wrap"
+        class="flex gap-4 place-content-center content-center place-items-stretch flex-wrap"
         transition:slide={{ duration: 500, delay: 100 }}
       >
         {#key colors}
           {#each colors as value, key (key)}
             <label
-              class={`flex gap-x-2 align-center content-center text-lg px-4 py-1.5 rounded-full ${
-                $enabledColors.includes(value) ? `bg-${value}-800` : 'bg-slate-700'
-              }`}
+              class="flex gap-x-2 align-center cursor-pointer shadow-sm hover:shadow-md content-center text-sm px-3.5 py-1 rounded-full transition-all duration-300 ease-in select-none opacity-80 hover:opacity-100  {$enabledColors.includes(
+                value
+              )
+                ? `bg-${value}-900 text-slate-200`
+                : 'bg-slate-800/75 hover:bg-slate-800 text-opacity-60 hover:text-opacity-80'}"
               for={`toggle-${value}-${key}`}
             >
               <input
@@ -61,15 +67,14 @@
       </div>
     {/if}
   </div>
-  <div class="col-span-3 pl-6">
+  <div class="relative content-end place-self-end text-right">
     <button
-      class=" text-base font-medium rounded-full bg-cyan-900 hover:bg-cyan-800 transition-all duration-300 ease-in text-white py-3 text-center cursor-pointer dark:highlight-mint-1000/20 flex gap-x-3 my-8 px-6 shadow-md ring-2 ring-inset ring-teal-1000"
+      hidden
+      class="visible absolute top-1 right-1 text-base font-medium rounded-full bg-cyan-900 hover:bg-cyan-800 transition-all duration-300 ease-in text-white py-3 px-3.5 text-center cursor-pointer dark:highlight-mint-1000/20 flex gap-x-3 mx-auto shadow-md ring-2 ring-inset ring-teal-1000"
       on:click={() => panelOpen.update(v => !v)}
     >
-      <SvgIcon id="adjustments" class="w-8 h-8 inline" />
-      <span class="text-xl tracking-tighter lowercase drop-shadow-sm hidden md:inline-block pr-2"
-        >Palettes</span
-      >
+      <SvgIcon id="adjustments" class="w-8 h-8 relative -bottom-px inline drop-shadow" />
+      <span class="text-xl tracking-tighter lowercase drop-shadow-sm hidden" />
     </button>
   </div>
 </div>

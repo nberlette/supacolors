@@ -10,5 +10,5 @@ module.exports = {
     },
   },
   plugins: [],
-  presets: [require('./src/styles/presets/dark')],
+  presets: [require('@supacolors/presets/dark'), require('@supacolors/presets/darkAlpha')],
 }

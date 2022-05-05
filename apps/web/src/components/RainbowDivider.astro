@@ -1,0 +1,45 @@
+---
+const {
+  height = 6,
+  stripes = 6,
+  colors = [
+    'blue',
+    'indigo',
+    'violet',
+    'plum',
+    'pink',
+    'crimson',
+    'red',
+    'tomato',
+    'orange',
+    'amber',
+    'yellow',
+    'lime',
+    'grass',
+    'green',
+    'teal',
+    'mint',
+    'sky',
+    'cyan',
+  ],
+} = Astro.props;
+const columns = 12,
+  width = Math.floor(columns / parseInt(stripes)),
+  extra = columns % parseInt(stripes);
+---
+
+<div class="w-full h-3 mb-2 overflow-hidden grid grid-cols-12 rounded-full">
+  <div class="block col-span-3 bg-brand-1000"></div>
+
+  <div class="block col-span-1 bg-blue-A1100"></div>
+
+  <div class="block col-span-2 bg-crimson-1100"></div>
+
+  <div class="block col-span-1 bg-yellow-1200"></div>
+
+  <div class="block col-span-2 bg-violet-1100"></div>
+
+  <div class="block col-span-1 bg-red-1100"></div>
+
+  <div class="block col-span-2 bg-grass-1200"></div>
+</div>
