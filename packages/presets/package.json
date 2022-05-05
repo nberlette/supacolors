@@ -2,8 +2,12 @@
   "name": "@supacolors/presets",
   "version": "0.0.0",
   "license": "MIT",
-  "author": "Nicholas Berlette <nick@berlette.com>",
-  "private": true,
+  "author": {
+    "name": "Nicholas Berlette",
+    "email": "nick@berlette.com",
+    "url": "https://github.com/nberlette"
+  },
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
@@ -27,5 +31,37 @@
     "lint": "",
     "start": "",
     "release": ""
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./light": {
+      "types": "./dist/light/index.d.ts",
+      "import": "./dist/light/index.mjs",
+      "require": "./dist/light/index.js"
+    },
+    "./lightAlpha": {
+      "types": "./dist/lightAlpha/index.d.ts",
+      "import": "./dist/lightAlpha/index.mjs",
+      "require": "./dist/lightAlpha/index.js"
+    },
+    "./dark": {
+      "types": "./dist/dark/index.d.ts",
+      "import": "./dist/dark/index.mjs",
+      "require": "./dist/dark/index.js"
+    },
+    "./darkAlpha": {
+      "types": "./dist/darkAlpha/index.d.ts",
+      "import": "./dist/darkAlpha/index.mjs",
+      "require": "./dist/darkAlpha/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ]
 }
