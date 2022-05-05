@@ -1,12 +1,11 @@
 {
-  "name": "supacolors",
+  "name": "supacolors-monorepo",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Nicholas Berlette <nick@berlette.com>",
   "private": true,
   "workspaces": [
     "apps/*",
-    "docs/",
     "packages/*"
   ],
   "engines": {
@@ -18,11 +17,7 @@
     "access": "restricted"
   },
   "homepage": "https://supacolors.ml",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nberlette/supacolors",
-    "directory": "./"
-  },
+  "repository": "nberlette/supacolors",
   "readme": "https://github.com/nberlette/supacolors#readme",
   "bugs": "https://github.com/nberlette/supacolors/issues",
   "scripts": {
@@ -30,16 +25,24 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "clean": "turbo run clean --no-cache && rm -rf node_modules",
-    "format": "prettier -w \"**/*.{js,jsx,ts,tsx,astro,svelte,vue,md,mdx}\""
+    "format:base": "prettier \"{packages,apps}/**/*.{js,jsx,ts,tsx,astro,svelte,vue,md,mdx}\"",
+    "format:check": "nr format:base -c",
+    "format": "nr format:base -w",
+    "version": "changeset version",
+    "release": "changeset publish"
   },
   "prettier": "@brlt/prettier",
   "devDependencies": {
     "@brlt/prettier": "^1.6.4",
-    "astro": "^1.0.0-beta.20",
+    "@changesets/cli": "^2.22.0",
+    "astro": "latest",
+    "fsxx": "^0.0.5",
     "prettier": "latest",
     "prettier-plugin-astro": "^0.0.12",
     "prettier-plugin-svelte": "^2.7.0",
-    "svelte": "^3.48.0",
-    "turbo": "latest"
+    "svelte": "latest",
+    "turbo": "latest",
+    "vite": "latest",
+    "zx": "4.3.0"
   }
 }

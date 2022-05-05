@@ -1,5 +1,6 @@
 tasks:
-  - init: pnpm install
+  - before: pnpm i -g pnpm
+    init: pnpm install
     command: pnpm dev
 
 ports:
@@ -26,7 +27,6 @@ vscode:
     - esbenp.prettier-vscode
     - dbaeumer.vscode-eslint
     - svelte.svelte-vscode
-    - nickyhajal.vs-code-svelte-require
     - editorconfig.editorconfig
     - GraphQL.vscode-graphql
     - christian-kohler.path-intellisense
