@@ -1,5 +1,8 @@
+image: nberlette/gitpod-enhanced:latest
+
 tasks:
-  - init: pnpm install
+  - init: pnpm i -g pnpm
+    before: pnpm install
     command: pnpm dev
 
 ports:
@@ -33,3 +36,5 @@ vscode:
     - christian-kohler.npm-intellisense
     - eg2.vscode-npm-script
     - bradlc.vscode-tailwindcss
+    - antfu.vite
+    - antfu.iconify
