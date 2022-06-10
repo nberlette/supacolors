@@ -3,28 +3,23 @@
   "version": "0.0.0",
   "license": "MIT",
   "author": "Nicholas Berlette <nick@berlette.com>",
+  "homepage": "https://supacolors.ml",
+  "repository": "nberlette/supacolors",
+  "readme": "https://github.com/nberlette/supacolors#readme",
+  "bugs": "https://github.com/nberlette/supacolors/issues",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "docs/",
-    "packages/*"
-  ],
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
-  },
-  "packageManager": "pnpm@7.0.0",
   "publishConfig": {
     "access": "restricted"
   },
-  "homepage": "https://supacolors.ml",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nberlette/supacolors",
-    "directory": "./"
+  "packageManager": "pnpm@7.1.9",
+  "workspaces": [
+    "docs/",
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=16"
   },
-  "readme": "https://github.com/nberlette/supacolors#readme",
-  "bugs": "https://github.com/nberlette/supacolors/issues",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
@@ -32,13 +27,33 @@
     "clean": "turbo run clean --no-cache && rm -rf node_modules",
     "format": "prettier -w \"**/*.{js,jsx,ts,tsx,astro,svelte,vue,md,mdx}\""
   },
+  "eslintConfig": {
+    "extends": [
+      "@brlt"  
+    ],
+    "root": true,
+    "ignorePatterns": [
+      "node_modules",
+      "dist",
+      "build"
+    ]
+  },
   "prettier": "@brlt/prettier",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "svelte"
+      ]
+    }
+  },
   "devDependencies": {
-    "@brlt/prettier": "^1.6.4",
-    "astro": "^1.0.0-beta.20",
-    "prettier": "latest",
-    "prettier-plugin-astro": "^0.0.12",
-    "prettier-plugin-svelte": "^2.7.0",
+    "@brlt/eslint-config": "^0.0.4",
+    "@brlt/prettier": "^1.8.2",
+    "astro": "latest",
+    "eslint": "8.17.0",
+    "prettier": "2.6.2",
+    "prettier-plugin-astro": "next",
+    "prettier-plugin-svelte": "latest",
     "svelte": "^3.48.0",
     "turbo": "latest"
   }
